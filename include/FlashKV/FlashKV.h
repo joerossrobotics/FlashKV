@@ -112,8 +112,8 @@ namespace FlashKV
         /**
          * @brief Writes a key-value pair to the map.
          *
-         * @param key The key to be written. Should be a uint8_t value.
-         * @param value The value to be associated with the key. Should be a uint8_t value.
+         * @param key The key to be written.
+         * @param value The value to be associated with the key. Should be a std::vector of uint8_t values.
          *
          * @return True if the write operation was successful, false otherwise.
          */
@@ -122,7 +122,7 @@ namespace FlashKV
         /**
          * @brief Reads a value associated with a key from the map.
          *
-         * @param key The key to be read. Should be a uint8_t value.
+         * @param key The key to be read.
          *
          * @return The value associated with the key if the read operation was successful, std::nullopt otherwise.
          */
@@ -131,7 +131,7 @@ namespace FlashKV
         /**
          * @brief Erases a key-value pair from the map.
          *
-         * @param key The key to be erased. Should be a uint8_t value.
+         * @param key The key to be erased.
          *
          * @return True if the erase operation was successful, false otherwise.
          */
