@@ -138,6 +138,20 @@ namespace FlashKV
         return keys;
     }
 
+    bool FlashKV::writeString(std::string key, std::string value)
+    {
+        return writeKey(key, std::vector<uint8_t>(value.begin(), value.end()));
+    }
+
+    std::optional<std::string> FlashKV::readString(std::string key)
+    {
+        auto value = readKey(key);
+        if (value)
+            return std::string(value->begin(), value->end());
+
+        return std::nullopt;
+    }
+
     // --------------------------------------------------------------------------------------------------------------------- //
 
     // --------------------------------------    H E L P E R    F U N C T I O N S    --------------------------------------- //

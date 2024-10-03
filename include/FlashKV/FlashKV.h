@@ -144,6 +144,25 @@ namespace FlashKV
          */
         std::vector<std::string> getAllKeys();
 
+        /**
+         * @brief Writes a string value to the map.
+         *
+         * @param key The key to be written.
+         * @param value The string value to be written.
+         *
+         * @return True if the write operation was successful, false otherwise.
+         */
+        bool writeString(std::string key, std::string value);
+
+        /**
+         * @brief Reads a string value associated with a key from the map.
+         *
+         * @param key The key to be read.
+         *
+         * @return The string value associated with the key if the read operation was successful, std::nullopt otherwise.
+         */
+        std::optional<std::string> readString(std::string key);
+
     private:
         FlashWriteFunction flashWriteFunction; // Function for writing to Flash memory.
         FlashReadFunction flashReadFunction;   // Function for reading from Flash memory.
