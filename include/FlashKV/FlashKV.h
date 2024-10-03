@@ -84,6 +84,8 @@ namespace FlashKV
                 size_t flashAddress,
                 size_t flashSize);
 
+        FlashKV() {}
+
         /**
          * @brief Destroys the FlashKV object.
          *
